@@ -41,14 +41,23 @@ const App = () => {
     setLoading(false);
   };
 
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
   return (
     <Box bg="blue.600" color="white" height="100vh" paddingTop={130}>
       <Container maxW="3xl" centerContent>
         <Header />
         <TextInput extractKeywords={extractKeywords} />
-        <KeywordsModal />
         <Footer />
       </Container>
+      <KeywordsModal
+        keywords={keywords}
+        loading={loading}
+        isOpen={isOpen}
+        closeModal={closeModal}
+      />
     </Box>
   );
 };
