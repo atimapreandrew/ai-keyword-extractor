@@ -1,0 +1,16 @@
+import React from "react";
+import { Box, Image, Text, Flex } from "@chakra-ui/react";
+import logo from "../assets/openai.png";
+
+const Footer = () => {
+  return (
+    <Box marginTop={50} marginBottom={30}>
+      <Flex justifyContent="center" alignItems="center">
+        <Image src={logo} marginRight={1} />
+      </Flex>
+      <Text>Powered by Open AI</Text>
+    </Box>
+  );
+};
+
+export default Footer;
